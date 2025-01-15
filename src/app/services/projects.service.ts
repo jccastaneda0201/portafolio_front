@@ -9,7 +9,7 @@ import { lastValueFrom } from 'rxjs';
 })
 export class ProjectsService {
   private httpClient = inject(HttpClient);
-  private apiUrlProjects = `${environment.apiUrl}/projects`;
+  private apiUrlProjects = `${environment.apiUrl}/api/projects`;
   async getAllProjects(): Promise<Project[]> {
     return lastValueFrom(this.httpClient.get<Project[]>(this.apiUrlProjects));
   }

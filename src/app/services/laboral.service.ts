@@ -10,7 +10,7 @@ import { lastValueFrom } from 'rxjs';
 export class LaboralService {
 
   private httpClient = inject(HttpClient);
-  private apiUrlLaboral = `${environment.apiUrl}/laboral`;
+  private apiUrlLaboral = `${environment.apiUrl}/api/laboral`;
 
 
 

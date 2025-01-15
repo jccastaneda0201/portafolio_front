@@ -1,3 +1,3 @@
 export const environment = {
-    apiUrl: 'POR DETERMINAR'
+    apiUrl: 'https://portafolio-back-5su2.onrender.com'
 };

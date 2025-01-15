@@ -16,7 +16,7 @@ type CreateBody = {
 })
 export class ContactosService {
   private httpClient = inject(HttpClient);
-  private apiUrl = `${environment.apiUrl}/contactos`;
+  private apiUrl = `${environment.apiUrl}/api/contactos`;
 
 
   async create(body: CreateBody): Promise<Contacto[]> {

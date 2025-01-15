@@ -9,7 +9,7 @@ import User from '../interfaces/user.interface';
 })
 export class UsersService {
   private httpClient = inject(HttpClient);
-  private apiUrl = `${environment.apiUrl}/users`;
+  private apiUrl = `${environment.apiUrl}/api/users`;
 
   getAllUsers(): Promise<User[]> {
     return lastValueFrom(this.httpClient.get<User[]>(this.apiUrl));
