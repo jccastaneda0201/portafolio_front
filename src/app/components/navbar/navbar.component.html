@@ -1,0 +1,63 @@
+<nav
+  [class]="
+    isSobreMiActive
+      ? 'navbar navbar-fixed-top navbar-default'
+      : 'navbar navbar-fixed-top navbar-inverse'
+  "
+>
+  <div class="container">
+    <button
+      type="button"
+      class="navbar-toggle collapsed"
+      data-toggle="collapse"
+      data-target="#navbar-collapse"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a
+            [routerLink]="['/']"
+            routerLinkActive="active-link"
+            (click)="updateNavbarClass('/')"
+          >
+            01 : Home
+          </a>
+        </li>
+        <li>
+          <a
+            [routerLink]="['/sobremi']"
+            routerLinkActive="active-link"
+            (click)="updateNavbarClass('/sobremi')"
+          >
+            02 : Sobre mí
+          </a>
+        </li>
+        <li>
+          <a
+            [routerLink]="['/trabajos']"
+            routerLinkActive="active-link"
+            (click)="updateNavbarClass('/sobremi')"
+          >
+            03 : Trabajos y Proyectos
+          </a>
+        </li>
+        <li>
+          <a
+            [routerLink]="['/contacto']"
+            routerLinkActive="active-link"
+            (click)="updateNavbarClass('/sobremi')"
+          >
+            04 : Contacto
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

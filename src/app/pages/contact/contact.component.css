@@ -1,0 +1,14 @@
+.address-container li {
+  font-size: 1.3rem !important;
+  line-height: 3;
+}
+
+.address-container h3 {
+  margin-top: 10rem !important;
+}
+
+.form-control::placeholder {
+  color: #999;
+  opacity: 1;
+  font-size: 1.5rem !important;
+}

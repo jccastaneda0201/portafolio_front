@@ -1,0 +1,155 @@
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 section-container-spacer">
+        <div class="text-center">
+          <h2 class="h2">02 : Trabajos y Proyectos</h2>
+          <p>
+            En esta sección encontrarás información sobre mi experiencia laboral
+            y los proyectos en los que he trabajado.
+          </p>
+        </div>
+      </div>
+
+      >
+      <section>
+        @for (experiencia of laboral; track experiencia.id ){
+        <div>
+          <!-- Experiencia 1 -->
+          <article class="grid grid-cols-1 md:grid-cols-5 gap-4">
+            <!-- Empresa y Descripción -->
+            <div class="relative md:col-span-2">
+              <section>
+                <h4 class="tittle">
+                  {{ experiencia.empresa }}
+                </h4>
+                <p class="text-md text-gray-400 italic">
+                  <time datetime="2021-10">{{
+                    experiencia.fechaInicio | date : "dd/MM/yyyy"
+                  }}</time>
+                  -
+                  <time datetime="2024-02">{{
+                    experiencia.fechaFin | date : "dd/MM/yyyy"
+                  }}</time>
+                </p>
+                <p class="text-md text-gray-400 italic">
+                  Actual:
+                  <span class="text-gf-yellow">{{
+                    getActualStatus(experiencia.actual)
+                  }}</span>
+                </p>
+              </section>
+              <p class="text-description">
+                {{ experiencia.descripcion }}
+              </p>
+            </div>
+            <!-- Detalles y habilidades -->
+            <div class="relative md:col-span-3">
+              <ul
+                class="list-disc flex flex-col gap-1 pb-4 text-description text-gray-200"
+              >
+                <li>
+                  {{ experiencia.funciones }}
+                </li>
+              </ul>
+              <p class="text-md text-gray-400 font-semibold">Habilidades:</p>
+              <ul
+                class="list-disc flex flex-col gap-1 pb-4 text-habilidad text-gray-200"
+              >
+                <li>{{ experiencia.habilidades }}</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        }
+      </section>
+      <div class="col-md-12">
+        <div id="myCarousel" class="carousel slide projects-carousel">
+          <!-- Carousel items -->
+          <h3 class="text-center mb-4">Proyectos</h3>
+          <div class="carousel-inner">
+            <div class="item active">
+              <div class="row">
+                @for(proyectos of projects; track proyectos.id){
+                <div class="col-sm-4">
+                  <a
+                    href="./work.html"
+                    title=""
+                    class="black-image-project-hover"
+                  >
+                    <img
+                      src="images/work01-hover.jpg"
+                      alt=""
+                      class="img-responsive"
+                    />
+                  </a>
+                  <div class="card-container card-container-lg">
+                    <h4>{{ proyectos.categoria }}</h4>
+                    <h3>{{ proyectos.titulo }}</h3>
+                    <p>
+                      {{ proyectos.descripcion }}
+                    </p>
+                    <a
+                      class="btn btn-default"
+                      href="{{ proyectos.urlGitHub }}"
+                      target="_blank"
+                      aria-label="GitHub"
+                      >Descubrir
+                      <fa-icon [icon]="['fab', 'github']"></fa-icon>
+                    </a>
+                  </div>
+                </div>
+                }
+              </div>
+
+              <!--/row-->
+            </div>
+            <!--/item-->
+            <div class="item">
+              <div class="row">
+                @for(proyectos of projects; track proyectos.id){
+                <div class="col-sm-4">
+                  <a href="./work.html" class="black-image-project-hover">
+                    <img
+                      src="images/work02-hover.jpg"
+                      alt="Image"
+                      class="img-responsive"
+                    />
+                  </a>
+                  <div class="card-container">
+                    <h4>{{ proyectos.categoria }}</h4>
+                    <h3>{{ proyectos.titulo }}</h3>
+                    <p>
+                      {{ proyectos.descripcion }}
+                    </p>
+                    <a
+                      class="btn btn-default"
+                      href="https://github.com/jccastaneda0201"
+                      target="_blank"
+                      aria-label="GitHub"
+                      >Descubrir
+                      <fa-icon [icon]="['fab', 'github']"></fa-icon>
+                    </a>
+                  </div>
+                </div>
+                }
+              </div>
+              <!--/row-->
+            </div>
+            <!--/item-->
+          </div>
+          <!--/carousel-inner-->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev"
+            >‹</a
+          >
+
+          <a class="right carousel-control" href="#myCarousel" data-slide="next"
+            >›</a
+          >
+        </div>
+
+        <!--/myCarousel-->
+      </div>
+    </div>
+  </div>
+</div>

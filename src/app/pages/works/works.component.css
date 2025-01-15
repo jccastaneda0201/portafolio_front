@@ -1,0 +1,48 @@
+.text-center {
+  p {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+}
+
+.tittle {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.text-md {
+  font-size: 1.3rem;
+}
+.text-description {
+  font-size: 1.5rem;
+}
+.text-habilidad {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: left !important;
+}
+
+.card-container {
+  height: 45rem !important;
+  p {
+    margin-bottom: 3rem !important;
+  }
+  a {
+    position: absolute !important;
+    bottom: 10% !important;
+    font-size: 1.5rem;
+
+    fa-icon {
+      font-size: 2rem !important;
+    }
+  }
+}

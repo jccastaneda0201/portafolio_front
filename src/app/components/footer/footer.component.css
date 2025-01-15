@@ -1,0 +1,26 @@
+.footer-rrss {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+
+  a {
+    display: flex;
+    color: #1b5e20;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    fa-icon {
+      font-size: 5rem !important;
+    }
+  }
+}
+
+.row {
+  p {
+    font-size: 1.5rem !important;
+  }
+}
+
+.footer {
+  margin-top: 2rem;
+}
