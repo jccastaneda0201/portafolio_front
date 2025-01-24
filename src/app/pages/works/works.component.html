@@ -48,15 +48,19 @@
               <ul
                 class="list-disc flex flex-col gap-1 pb-4 text-description text-gray-200"
               >
+              @for (funcion of experiencia.funciones; track $index) {
                 <li>
-                  {{ experiencia.funciones }}
+                  {{ funcion }}
                 </li>
+              }
               </ul>
               <p class="text-md text-gray-400 font-semibold">Habilidades:</p>
               <ul
                 class="list-disc flex flex-col gap-1 pb-4 text-habilidad text-gray-200"
               >
-                <li>{{ experiencia.habilidades }}</li>
+              @for (objH of habilidadesObjetos; track $index) {
+                <li>{{ objH.habilidad }}</li>
+              }
               </ul>
             </div>
           </article>
